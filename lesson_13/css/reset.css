@@ -1,0 +1,377 @@
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+border: none;
+box-sizing: border-box;
+}
+li {
+   list-style: none;
+}
+a {
+   color: inherit;
+   text-decoration: none;
+}
+img {
+vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+}
+input,
+button,
+textarea {
+   font-weight: inherit;
+   font-size: inherit;
+}
+button {
+   cursor: pointer;
+   color: inherit;
+   background-color: inherit;
+}
+html,
+body{
+   height: 100%;
+}
+body {
+   line-height: 1;
+}
+.wrapper{
+   position: relative;
+   overflow: hidden;
+   min-height: 100%;
+}
+.page__picter{ 
+   background:url("../img/home.png") 0 0 no-repeat;
+}
+.page__container{
+   width: 2000px;
+   height: 2500px;
+   margin: 0 auto;
+   position: relative;
+}
+.sky {
+  position: absolute;
+  width: 1400px;
+  height: 600px;
+  top: 100px;
+  left: 200px;
+}
+.sky__cloud::before{
+   content: " ";
+   background: url(../img/cloud.png) 0 0 no-repeat;
+   width: 400px;
+   height: 300px;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   animation: sky 5s linear infinite alternate;
+}
+.sky__cloud::after{
+   content: "";
+   background:url(../img/cloud2.png) 0 0 no-repeat;
+   width: 600px;
+   height: 600px;
+   position: absolute;
+   top: 300px;
+   left: 350px;
+   animation: sky 3s linear infinite 0.5s alternate;
+}
+@keyframes sky {
+   0%{
+      transform: translate(0,30px); 
+   }
+   100%{
+      transform: translate(0,-30px);  
+   }
+}
+.sky__sun {
+   position: relative; 
+   width: 900px;
+   height: 900px;
+   top: 0px;
+   left: 500px;
+}
+
+.sky__sun::before {
+   content: "";
+   background: url("../img/sun2.png") 0 0 no-repeat;
+   width: 600px;
+   height: 600px;
+   position: absolute;
+   top: 0%;
+   right: 0%; 
+   animation: sun 20s linear infinite;
+}
+ .sky__sun::after {
+   content: "";
+   background: url("../img/sun.png") 0 7px no-repeat;
+   width: 600px;
+   height: 600px;
+   position: absolute;
+   top: 0%;
+   right: 0%; 
+   animation: sky-sun 3s ease infinite alternate;
+} 
+@keyframes sun {
+   0%{
+      transform: rotate(0);
+   }
+   100%{
+      transform: rotate(360deg);
+   }
+}
+@keyframes sky-sun {
+   0%{
+      transform: scale(0.9);
+   }
+   100%{
+      transform: scale(1.1);
+   }
+}
+.girl {
+width: 700px;
+height: 900px;
+position: relative;
+top: 23%;
+left: 200%; 
+animation: girl 8s ease forwards;  
+}
+ @keyframes girl {
+   0%{
+      transform: translateX(0px);
+   }
+   100%{
+      transform: translateX(-5600px);
+   }
+}  
+.girl__top {
+   background: url("../img/girl.png") 0 0 no-repeat;
+   width: 300px;
+   height: 300px;
+   margin: 0 auto;
+}
+.girl__skirt {
+   background:url("../img/skirt.png") 0 0 no-repeat;
+   width: 400px;
+   height: 400px;
+   padding-left: 200px;
+   position: absolute;
+   top: 160px;
+   left: 85px;
+   z-index: 1;
+}
+.legs {
+   position: relative;
+   width: 270px;
+   height: 420px;
+   top: 120px;
+   left: 160px;
+}
+ .legs__right{
+   position: absolute;
+   width: 150px;
+   height: 100%;
+   top: 0;
+   left: 0;
+}
+.legs__top {
+   width: 60px;
+   height: 150px;
+   border: 1px solid rgb(222, 187, 145);
+   border-radius: 32% 68% 38% 62% / 31% 6% 94% 69%;
+   position: absolute;
+   top: 0px;
+   left: 40px;
+   background-color: rgb(222, 187, 145);
+   box-shadow: inset 1px 1px 4px 2px rgb(173, 96, 68);  
+}
+.legs__bottom {
+   width: 40px;
+   height: 220px;
+   border: 1px solid rgb(222, 187, 145);
+   border-radius: 46% 54% 38% 62% / 0% 20% 80% 100%;
+   position: absolute;
+   top: 130px;
+   left: 10px;
+   background-color: rgb(222, 187, 145);
+   box-shadow: inset 1px 1px 4px 2px rgb(173, 96, 68);
+   transform-origin: top;
+   animation: leg 2s linear infinite alternate; 
+}
+  @keyframes leg {
+   0%{
+      transform: rotate(30deg);
+   }
+   100%{
+      transform: rotate(-140deg);
+   }
+}  
+.legs__shoes {
+   background:url("../img/shoes.png") 0 0 no-repeat;
+   width: 150px;
+   height: 150px;
+   position: relative;
+   top: 140px;
+   left: -60px;
+   z-index: 2;
+}
+.legs__left {
+   position: absolute;
+   width: 150px;
+   height: 100%;
+   top: 0;
+   right: 0;
+} 
+.legs__bottom--two{
+    animation: legs 2s linear infinite alternate;  
+}
+ @keyframes legs {
+   0%{
+      transform: rotate(-140deg);
+   }
+   100%{
+      transform: rotate(10deg);
+   }
+}  
+.spider {
+   background: url("../img/spider.png") 0 0 no-repeat;
+   width: 500px;
+   height: 327px;
+   position: relative;
+   right: -150%;
+   top: 15%;
+   animation: spider 12s ease alternate 3s forwards; 
+}
+ @keyframes spider {
+   0%{
+      transform: translateX(0px);
+   }
+   30%{
+      transform: translateX(-2000px);
+   }
+   50%{
+      transform: translateX(-2000px);
+   }
+   100%{
+      transform: translateX(2500px); 
+   }
+}  
+.spider__ridge{
+   width: 20px;
+   height: 20px;
+   border: 1px solid black;
+   background-color: black;
+   border-radius: 5px;
+   position: relative;
+   top: 100px;
+   left: 140px; 
+}
+.spider__ridge::before{
+   content: "";
+   background: url("../img/eyes.png");
+   width: 100px;
+   height: 80px;
+   position: absolute;
+   top:-40px;
+   left: -20px;
+   z-index: 20;
+   transform: scale(0.5);
+   animation: eyes 3s ease forwards 8s;
+}
+@keyframes eyes {
+   0%{
+      transform: scale(0.5);
+   }
+   100%{
+      transform: scale(1.5);
+   }
+}
+.spider__paws {
+   width: 10px;
+   height: 150px;
+   border: 1px solid black;
+   background-color: black;
+   border-radius: 5px;
+   position: absolute;
+   transform-origin: top;
+}
+.spider__paws--one {
+   transform: rotate(150deg);
+   animation: paws 0.5s ease infinite alternate;
+}
+.spider__paws--two {
+   transform: rotate(130deg);
+   animation: paws 0.5s ease infinite alternate 1s;
+}
+.spider__paws--three {
+   transform: rotate(120deg);
+   animation: paws 0.5s ease infinite alternate 1.5s;
+}
+.spider__paws--four {
+   transform: rotate(100deg);
+   animation: paws 0.5s linear infinite alternate 2s;
+}
+ @keyframes paws {
+   0%{
+      transform: rotate(180deg);
+   }
+   100%{
+      transform: rotate(80deg);
+   }
+}  
+.children{
+   background: url("../img/children.png") 0 0 no-repeat;
+   width: 700px;
+   height: 700px;
+   position: relative;
+   right:100%;
+   bottom: 30%;
+   animation: children 5s ease forwards 5.2s; 
+}
+ @keyframes children {
+   0%{
+      transform: translate(600px,200px);
+   }
+   50%{
+      transform: translate(1000px,-100px);
+   }
+   100%{
+      transform: translate(3000px,200px);
+   }
+} 
+.link{
+   width: 400px;
+   height: 150px;
+   border: 1px solid black;
+   border-radius: 30%;
+   position: absolute;
+   top: 50%;
+   left: 30%;
+   background-color: aquamarine;
+   box-shadow: 15px 15px 15px 5px rgb(109, 107, 107),20px 20px 5px 5px black,inset 10px 10px 20px 5px gray;
+   text-align:center;
+   font-size: 80px;
+   font-weight: 700;
+   padding-top: 30px;
+   transition: all 0.3s ease 10s;
+   animation: click 1s ease forwards 10s;
+   transform: translateY(50%);
+   opacity: 0;
+}
+@keyframes click {
+   100%{
+      transform: translateY(0%);
+      opacity: 1;
+   }
+}
+.link:active {
+   box-shadow:15px 15px 5px 5px black,inset 10px 10px 20px 5px gray;
+}

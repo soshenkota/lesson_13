@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+border: none;
+box-sizing: border-box;
+}
+li {
+   list-style: none;
+}
+a {
+   color: inherit;
+   text-decoration: none;
+}
+img {
+vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+}
+input,
+button,
+textarea {
+   font-weight: inherit;
+   font-size: inherit;
+}
+button {
+   cursor: pointer;
+   color: inherit;
+   background-color: inherit;
+}
+html,
+body{
+   height: 100%;
+}
+body {
+   line-height: 1;
+}
+.wrapper{
+   position: relative;
+   overflow: hidden;
+   min-height: 100%;
+}
+.picter {
+   background: url(../img/starry_sky.png) 0 0/ cover no-repeat;
+}
+.picter__container {
+   width: 1600px;
+   height: 2000px;
+   position: relative;
+   margin: 0 auto;
+}
+.picter__moon {
+   background: url(../img/moon.png) 0 0 no-repeat;
+   width: 600px;
+   height: 600px;
+   position: absolute;
+   top: -500px;
+   right: 0;
+   animation: moon 7s cubic-bezier(0.68, -0.55, 0.265, 1.55) alternate forwards;
+}
+@keyframes moon {
+   0%{
+      transform: translateY(-500px);
+   }
+   50%{
+      transform: translateY(1000px);
+   }
+   80%{
+      transform: translateY(-500px);
+   }
+   100%{ 
+      transform: translateY(500px);
+   }
+}
+.picter__spider {
+   background: url(../img/spider.png) 0 0 no-repeat;
+   width: 400px;
+   height: 400px;
+   position: absolute;
+   top: 30%;
+   left: 40%;
+   animation: spider 1s linear infinite; 
+}
+ @keyframes spider {
+   100%{
+     transform: rotate(360deg);
+   }  
+}
+.picter__spider:hover{
+   animation-play-state: paused;
+   
+}
+.picter__spider::before{
+   content: "";
+   background: url("../img/eyes.png");
+   width: 100px;
+   height: 80px;
+   position: absolute;
+   top:50px;
+   left: 100px;
+   z-index: 20;
+   transform: scale(0.5);
+   animation: eyes 3s linear infinite alternate;
+}
+@keyframes eyes {
+   0%{
+      transform: scale(0.5);
+   }
+   100%{
+      transform: scale(1.5);
+   }
+} 
